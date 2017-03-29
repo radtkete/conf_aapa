@@ -1,0 +1,106 @@
+@import "bourbon";
+@import "neat";
+@import "variables/typography";
+@import "variables/variables";
+@import "mixins/transition";
+@import "fonts";
+@import "global";
+@import "components/index";
+
+.span4 {
+  @include span-columns(8);
+}
+
+.c-tabs {
+  /**/
+}
+
+/**
+ * Tabs navigation
+ */
+.c-tabs-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-tabs-nav__link {
+  flex: 1;
+  margin-right: 4px;
+  padding: 12px;
+  color: #fff;
+  background-color: #b3b3b3;
+  text-align: center;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    color: #6d6d6d;
+  }
+
+  &.is-active {
+    color: #dc446e;
+    background-color: #e7e7e7;
+  }
+
+  i {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+
+    @include media(720px) {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+  }
+
+  span {
+    display: none;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+
+    @include media(720px) {
+      display: block;
+    }
+  }
+}
+
+/**
+ * Tab
+ */
+.c-tab {
+  display: none;
+  background-color: #e7e7e7;
+
+  &.is-active {
+    display: block;
+  }
+
+  &__content {
+    padding: 1.5rem;
+  }
+}
+
+/**
+ * Tabs no-js fallback
+ */
+.c-tabs.no-js .c-tabs-nav {
+  display: none;
+}
+
+.c-tabs.no-js .c-tab {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.c-tabs.no-js .c-tab:last-child {
+  margin-bottom: 0;
+}

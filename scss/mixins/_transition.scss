@@ -1,0 +1,84 @@
+@mixin transition-in($property: all) {
+	transition-duration: 150ms;
+	transition-property: $property;
+	transition-timing-function: $ease-out-quad;
+}
+
+@mixin transition-out($property: all) {
+	transition-duration: 250ms;
+	transition-property: $property;
+	transition-timing-function: $ease-in-quad;
+}
+
+@mixin transition($property: all) {
+	// transition out with slow easing
+	@include transition-out($property);
+
+	// transition in with fast easing
+	&:focus,
+	&:hover {
+		@include transition-in($property);
+	}
+}
+
+
+
+
+
+/* Scroll down icon */
+
+@-webkit-keyframes scroll-down-anim {
+  0% {
+    bottom: 2px;
+  }
+
+  50% {
+    bottom: 7px;
+  }
+
+  100% {
+    bottom: 2px;
+  }
+}
+
+@-moz-keyframes scroll-down-anim {
+  0% {
+    bottom: 2px;
+  }
+
+  50% {
+    bottom: 7px;
+  }
+
+  100% {
+    bottom: 2px;
+  }
+}
+
+@-o-keyframes scroll-down-anim {
+  0% {
+    bottom: 2px;
+  }
+
+  50% {
+    bottom: 7px;
+  }
+
+  100% {
+    bottom: 2px;
+  }
+}
+
+@keyframes scroll-down-anim {
+  0% {
+    bottom: 2px;
+  }
+
+  50% {
+    bottom: 7px;
+  }
+
+  100% {
+    bottom: 2px;
+  }
+}

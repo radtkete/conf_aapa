@@ -1,0 +1,278 @@
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+dl {
+  margin: 0;
+}
+
+dt {
+  font-weight: 600;
+  margin: 0;
+}
+
+dd {
+  margin: 0;
+}
+
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.tabs {
+  border: 1px solid $medium-gray;
+  margin-top: 50px;
+  @include media($xsmall-only) {
+    padding: 10px;
+  }
+
+  &--nav {
+    text-align: center;
+    margin: -45px 0 0;
+    @include media($small-down) {
+      margin: -30px 0 0;
+    }
+
+    ul {
+      display: inline-block;
+      border: 1px solid $medium-gray;
+      li {
+        float: left;
+        border-right: 1px solid $medium-gray;
+        @include media($large-down) {
+          min-width: 134px;
+        }       
+        @include media($medium-down) {
+          min-width: 95px;
+        }
+        @include media(max-width 480px) {
+          width: 100%;
+          border-bottom: 1px solid $medium-gray;
+          border-right: 0;
+        }
+        &:last-child {
+          margin: 0;
+          border: 0;
+        }
+      }
+    }
+
+    &__item {
+      @include padding(15px 30px);
+      display: block;
+      font-size: 24px;
+      color: $color-pink;
+      background-color: #fff;
+      text-align: center;
+      position: relative;
+      font-weight: 600;
+      @include media($medium-down) {
+        @include padding(15px);
+        font-size: 18px;
+      }
+
+      @include media($medium-down) {
+        @include padding(15px);
+        font-size: 18px;
+      }
+
+      &:hover {
+        background-color: #eee;
+        color: $color-purple;
+      }
+
+      &.is-active {
+        color: #fff;
+        background-color: $color-pink;
+        @include media ($small-up) {
+          &:after {
+            @include triangle(24px, $color-pink, down);
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -12px;
+            margin-left: -12px;
+          }
+        }
+        span {
+          color: #fff;
+        }
+      }
+
+      span {
+        text-transform: uppercase;
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        color: #444;
+        @include media($medium-down) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+
+  &--content {
+    display: none;
+    padding: 30px 60px 30px 30px;
+    @include media($medium-down) {
+      @include padding(30px 20px);
+    }
+    @include media($xsmall-only) {
+      padding: 0;
+    }
+    &.is-active {
+      display: block;
+    }
+  }
+
+  // Tabs no-js fallback
+  &.no-js {
+    .tabs--nav {
+      display: none;
+    }
+    .tabs--content {
+      display: block;
+      margin-bottom: 1.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.comment {
+  $comment-gutter: 1.4em;
+  $comment-image-padding: 0.7em;
+  $comment-image-width: 6em;
+  $comment-color: $base-font-color;
+  $comment-detail-color: transparentize($comment-color, 0.5);
+  $comment-image-vert-alignment: top;
+
+  // border-bottom: 1px solid transparentize($comment-color, 0.9);
+  display: table;
+  margin-bottom: $base-spacing;
+  // padding-bottom: $base-spacing;
+  width: 100%;
+
+  .comment-image,
+  .comment-content {
+    display: table-cell;
+    vertical-align: $comment-image-vert-alignment;
+  }
+
+  .comment-image {
+    padding-right: $comment-gutter;
+
+    > img {
+      display: block;
+      height: auto;
+      max-width: none;
+      width: $comment-image-width;
+      border-radius: 100%;
+    }
+
+    .comment-reverse-order & {
+      padding-left: 10px;
+      padding-right: 0;
+    }
+  }
+
+  .comment-content {
+    width: 100%;
+    padding-left: $comment-gutter;
+    border-left: 1px solid transparentize($comment-color, 0.9);
+
+    .time-location {
+      overflow: hidden;
+      margin: 0 0 10px;
+      li {
+        margin: 0 30px 0 0;
+        font-weight: 700;
+        @include media($medium-down) {
+          font-size: 11px;
+          margin: 0 20px 0 0;
+        }
+        i {
+          margin: 0 10px 0 0;
+          color: $color-purple_light
+        }
+      }
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 0 0 15px;
+      @include media($large-down) {
+        font-size: 18px;
+      }
+    }
+
+    p {
+      line-height: 1.5em;
+      margin-bottom: 0.5em;
+    }
+
+    p.comment-detail {
+      color: $comment-detail-color;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+  }
+}
+
+
+
+

@@ -1,0 +1,53 @@
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  -ms-overflow-style: scrollbar;
+
+  // background-color: $html-bg-color;
+  // color: $html-text-color;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: $base-background-color;
+  color: $base-font-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+// .page {
+//   overflow: hidden;
+// }
+
+.page-section,
+.small-section {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 140px 0;
+}
