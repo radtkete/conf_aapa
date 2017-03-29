@@ -26,6 +26,7 @@ textarea {
 }
 
 #{$all-text-inputs} {
+  -webkit-appearance: none;
   appearance: none;
   background-color: $base-background-color;
   border: $base-border;
