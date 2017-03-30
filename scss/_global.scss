@@ -42,12 +42,45 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 140px 0;
+}
+
+
+.gradient-overlay {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .96;
+    width: 100%;
+    height: 100%;
+    background: #1eb089;
+    background: -moz-linear-gradient(left, #1eb089 0%, #7c49ab 100%, #7db9e8 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #1eb089), color-stop(100%, #7c49ab), color-stop(100%, #7db9e8));
+    background: -webkit-linear-gradient(left, #1eb089 0%, #7c49ab 100%, #7db9e8 100%);
+    background: -o-linear-gradient(left, #1eb089 0%, #7c49ab 100%, #7db9e8 100%);
+    background: -ms-linear-gradient(left, #1eb089 0%, #7c49ab 100%, #7db9e8 100%);
+    background: linear-gradient(to right, #1eb089 0%, #7c49ab 100%, #7db9e8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1eb089', endColorstr='#7db9e8', GradientType=1);
+  }
+}
+
+
+
+
+.elements-container {
+  @include margin(null auto);
+  @include padding(null $base-spacing);
+  max-width: 500px;
+}
+
+.welcome-message {
+  @include padding($base-spacing null);
+  background-color: #f2f2f2;
+  margin-bottom: $base-spacing;
+  text-align: center;
 }

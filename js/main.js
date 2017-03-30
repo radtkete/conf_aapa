@@ -5,11 +5,14 @@
   $(document).ready(function() {
       $(window).trigger("resize");
       init_mobile_nav_toggle();
+      video_bg_init();
+
   });
 
 
   $(window).resize(function() {
       init_classic_menu_resize();
+      js_height_init();
   });
 
 
@@ -73,11 +76,42 @@ function init_mobile_nav_toggle() {
 
 
 
+function video_bg_init(){
+  $('#video-bg').vide({
+    'mp4': 'video/video-restaurant',
+    'webm': 'video/video-restaurant',
+    'ogv': 'video/video-restaurant',
+    'poster': 'video/newOrleans.jpg',
+    }, {
+    position: '50% 50%',
+    posterType: 'jpg'
+  });
+}
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+function js_height_init(){
+    (function($){
+        $(".js-height-full").height($(window).height());
+        $(".js-height-parent").each(function(){
+            $(this).height($(this).parent().first().height());
+        });
+    })(jQuery);
+}
 
 
 

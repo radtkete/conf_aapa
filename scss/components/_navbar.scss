@@ -17,8 +17,6 @@ $navigation-color-hover: white;
   text-transform: uppercase;
 }
 
-
-
 .small-height {
   height: 55px !important;
   line-height: 55px !important;
@@ -282,6 +280,8 @@ $navigation-color-hover: white;
         width: 40px;
         height: 40px;
         line-height: 40px;
+        padding: 0;
+        margin-bottom: 0;
         margin-top: -20px;
         position: absolute;
         top: 50%;
