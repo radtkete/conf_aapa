@@ -1,24 +1,80 @@
-.countdown {
-  @include outer-container();
-  margin-top: 30px;
-  color: #fff;
-
-  &__item {
-    @include span-columns(6);
-    margin-bottom: 50px;
-
-    &--period {
-      width: 100%;
-      font-size: em(14px);
-      font-weight: $font-weight--medium;
-      display: block;
-      letter-spacing: .5em;
-      text-transform: uppercase;
+ul.countdown {
+  @include clearfix;
+  display: inline-block;
+  margin-bottom: 80px;
+  @include media($xsmall-only) {
+    margin-bottom: 20px;
+  }
+  > li {
+    @include margin(0 30px);
+    float: left;
+    @include media($medium-down) {
+      @include margin(0 20px);
     }
-
-    &--amount {
-      font-size: em(80px);
-      font-weight: $font-weight--thin;
+    @include media($xsmall-only) {
+      @include margin(0 10px 20px);
     }
   }
 }
+
+.countdown__number {
+  @include size(94px);
+  position: relative;
+  display: block;
+  color: $color-black;
+  font-size: 36px;
+  text-align: center;
+  line-height: 84px;
+  text-indent: 0.2em;
+  @include media($medium-down) {
+    @include size(74px);
+    font-size: 24px;
+    line-height: 64px;
+  }
+  @include media($xsmall-only) {
+    @include size(44px);
+    font-size: 20px;
+    line-height: 44px;
+  }
+  &:before {
+    @include size(100%);
+    @include position(absolute, 0 null null 0);
+    content: "";
+    display: block;
+    background: rgba($color-white, .95);
+    border-radius: 3px;
+    transform: rotate(45deg);
+    z-index: 1;
+  }
+
+  > span {
+    position: relative;
+    z-index: 2;
+  }
+  > b {
+    @include position(absolute, null null 20px 0);
+    display: block;
+    width: 100%;
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-indent: 1px;
+    line-height: 1;
+    color: $medium-gray;
+    z-index: 2;
+    @include media($medium-down) {
+      bottom: 18px;
+    }
+    @include media($xsmall-only) {
+      bottom: -20px;
+      font-size: 9px;
+      color: rgba($color-white, .85);
+    }
+  }
+}
+
+
+
+
+

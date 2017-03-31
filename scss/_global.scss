@@ -47,15 +47,17 @@ body {
   padding: 140px 0;
 }
 
-
 .gradient-overlay {
   position: relative;
+
   &:before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    opacity: .96;
+
+    // opacity: .96;
+    opacity: .50;
     width: 100%;
     height: 100%;
     background: #1eb089;
@@ -69,18 +71,20 @@ body {
   }
 }
 
-
-
-
 .elements-container {
   @include margin(null auto);
+
   @include padding(null $base-spacing);
+
   max-width: 500px;
 }
 
 .welcome-message {
   @include padding($base-spacing null);
+
   background-color: #f2f2f2;
   margin-bottom: $base-spacing;
   text-align: center;
 }
+
+

@@ -106,14 +106,14 @@ $white_75: rgba($white, .75);
     }
   }
   &.btn-border-c {
-    color: $color-pink;
-    border: 2px solid $color-pink;
+    color: $color-teal;
+    border: 2px solid $color-teal;
     background: transparent;
     &:hover,
     &:focus {
-      color: $white;
+      color: $color-black;
       border-color: transparent;
-      background: $color-pink;
+      background: $color-teal;
     }
   }
   &.btn-border-w {

@@ -19,6 +19,9 @@ $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
+$color-white: #fff;
+$black: #000;
+
 // Colors
 $blue: #1565c0;
 $dark-gray: #333;
@@ -34,7 +37,7 @@ $color-blue					: #636cb2;
 // Secondary Colors
 $color-pink  : rgb(237, 62, 122);
 $color-lime  : rgb(201, 218, 42);
-$color-black : rgb(32, 32, 32);
+$color-black : #202020;
 $color-gray  : rgb(153, 153, 153);
 
 
