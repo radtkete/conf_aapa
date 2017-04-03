@@ -29,11 +29,13 @@
         <div class="home-text">
           
           <img src="img/logo_small.svg" style="
-          max-width: 40%;
+          width: 600px;
           vertical-align: middle;
           display: block;
           margin: 0 auto 60px;
           ">
+
+
           <ul class="countdown" data-finish-date="05/15/2017 12:00:00" data-utc="2" data-finish-message="We have already started!">
             <li>
               <span class="countdown__number">
@@ -62,17 +64,27 @@
           </ul>
           
           <div class="local-scroll">
-            <a href="#" class="btn btn-lg btn-border-w hidden-xs">Learn More</a>
+            <a href="#" style="width: 190px;" class="btn btn-lg btn-border-w hidden-xs">Learn More</a>
             <span class="hidden-xs">&nbsp;</span>
-            <a href="#" class="btn btn-lg btn-border-w hidden-xs">Register</a>
+            <a href="#" style="width: 190px;" class="btn btn-lg btn-border-w hidden-xs">Register</a>
           </div>
           
         </div>
       </div>
       <!-- End Hero Content -->
+
+
+      <!-- Scroll Down -->
+      <div class="arrow bounce">
+        <a class="icon-wrap" href="#bazinga">
+          <img src="http://imgh.us/scroll-icon.svg" alt="" />
+        </a>
+      </div>
+      <!-- End Scroll Down -->
+
     </div>
   </section>
-  <header class="navigation" role="banner">
+  <header id="bazinga" class="navigation" role="banner">
     <section class="navigation-wrapper-top">
       <a href="javascript:void(0)" class="logo">
         <img alt="AAPA Conference 2018" src="img/logo_small.svg">
@@ -164,13 +176,18 @@
     </section>
   </header>
   
-  <div style="height: 2000px;">
-    <div id="example-section">
+  <div style="height: 4000px;">
+
+
+    <section class="small-section bg-secondary">
       <div class="section-title">
         <h1>Beyond Your Practice</h1>
         <p>It's time to go beyond your limits at the world's largest PA event. Explore five days of groundbreaking CME. Discover tools that will take your career to the next level. Elevate your thinking with the latest medical innovations. And experience it all with 8,000+ of your peers. PAs have been going above and beyond for 50 years — now it’s your turn to add to that legendary story.</p>
       </div>
-    </div>
+    </section>
+
+
+
     <!-- Features Grid -->
     <div class="featured-items">
       
@@ -179,7 +196,7 @@
         <div class="featured__item--icon">
           <img src="img/icons/icon_trumpet.svg">
         </div>
-        <h3 class="featured__item--title font-alt">Discover<br>New Orleans</h3>
+        <h3 class="base-headline featured__item--title">Discover<br>New Orleans</h3>
         <div class="featured__item--descr align-left">
           Explore the diverse culture, cuisine and nightlife of this exciting city.
         </div>
@@ -190,9 +207,9 @@
       <!-- Features Item -->
       <div class="featured__item">
         <div class="featured__item--icon">
-          <img src="img/icons/icon_concierge.svg">
+          <img src="img/icons/icon_bagage.svg">
         </div>
-        <h3 class="featured__item--title font-alt">Discounted<br>Hotel Rates</h3>
+        <h3 class="base-headline featured__item--title">Discounted<br>Hotel Rates</h3>
         <div class="featured__item--descr align-left">
           Get the best hotel rates when you book through AAPA!
         </div>
@@ -205,7 +222,7 @@
         <div class="featured__item--icon">
           <img src="img/icons/icon_conf.svg">
         </div>
-        <h3 class="featured__item--title font-alt">Conference<br>Venue</h3>
+        <h3 class="base-headline featured__item--title">Conference<br>Venue</h3>
         <div class="featured__item--descr align-left">
           900 Convention Center Blvd<br>
           New Orleans, LA 70130
@@ -219,7 +236,11 @@
     <!-- End Features Grid -->
 
 
-<section class="small-section">
+
+
+
+
+<section class="small-section bg-secondary">
     <div class="container">
       
       <div id="tabs" class="tabs-holder">
@@ -268,13 +289,13 @@
             <div class="event">
               <div class="event__time">
                 <ul class="event__list">
-                  <li><i class="fa fa-clock-o"></i>09:00 - 10:30</li>
+                  <li><i class="fa fa-clock-o"></i>6:30AM – 6:00PM</li>
                   <li><i class="fa fa-location-arrow"></i>Room A</li>
                   <li><i class="fa fa fa-user"></i>Jane Doe</li>
                 </ul>
               </div>
               <div class="event__details">
-                <h3>Welcoming and introduction</h3>
+                <h3 class="base-headline">Registration Open</h3>
                 <p>Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur....</p>
               </div>
             </div>
@@ -283,13 +304,13 @@
             <div class="event">
               <div class="event__time">
                 <ul class="event__list">
-                  <li><i class="fa fa-clock-o"></i>09:00 - 10:30</li>
+                  <li><i class="fa fa-clock-o"></i>8:00AM - 12:00PM</li>
                   <li><i class="fa fa-location-arrow"></i>Room A</li>
                   <li><i class="fa fa fa-user"></i>Jane Doe</li>
                 </ul>
               </div>
               <div class="event__details">
-                <h3>Welcoming and introduction</h3>
+                <h3 class="base-headline">CME Sessions and Workshops</h3>
                 <p>Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur....</p>
               </div>
             </div>
@@ -298,16 +319,31 @@
             <div class="event">
               <div class="event__time">
                 <ul class="event__list">
-                  <li><i class="fa fa-clock-o"></i>09:00 - 10:30</li>
+                  <li><i class="fa fa-clock-o"></i>8:00AM - 5:00PM</li>
                   <li><i class="fa fa-location-arrow"></i>Room A</li>
                   <li><i class="fa fa fa-user"></i>Jane Doe</li>
                 </ul>
               </div>
               <div class="event__details">
-                <h3>Welcoming and introduction</h3>
+                <h3 class="base-headline">AAPA Board of Directors Meeting</h3>
                 <p>Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur....</p>
               </div>
             </div>
+
+            <div class="event">
+              <div class="event__time">
+                <ul class="event__list">
+                  <li><i class="fa fa-clock-o"></i>9:00AM - 3:00PM</li>
+                  <li><i class="fa fa-location-arrow"></i>Room A</li>
+                  <li><i class="fa fa fa-user"></i>Jane Doe</li>
+                </ul>
+              </div>
+              <div class="event__details">
+                <h3 class="base-headline">Blood Drive provided by American Red Cross</h3>
+                <p>Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur....</p>
+              </div>
+            </div>
+
 
           </div>
 
@@ -342,6 +378,12 @@
 
 
 
+<div id="js-parallax-window" class="parallax-window">
+  <div class="parallax-static-content">
+    <a href="#" class="btn btn-lg">Search CME & Events</a>
+  </div>
+  <div id="js-parallax-background" class="parallax-background"></div>
+</div>
 
 
 
@@ -358,6 +400,8 @@
   <script>window.jQuery || document.write('<script src="dist/jquery-1.11.2.min.js"><\/script>')</script>
   <script type="text/javascript" src="dist/script.min.js"></script>
 
+  <!-- CDN -->
+  <!-- https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.js -->
 <script>
   var myTabs = tabs({
     el: '#tabs',

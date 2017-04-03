@@ -382,11 +382,11 @@ $button-transistion-duration: 0.3s;
         background: transparent;
         border: none;
         outline: none;
-        color: #999;
+        color: $color-purple_light;
         font-size: 14px;
 
         &:hover {
-          color: #111;
+          color: darken($color-purple, 10%);
         }
       }
     }

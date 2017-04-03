@@ -6,24 +6,35 @@ $large-screen: 900px;
 $base-font-family: $font-stack-system;
 $heading-font-family: $base-font-family;
 
+// Font Weights
+$font-weight--thin       : 100;
+$font-weight--light      : 300;
+$font-weight--regular    : 400;
+$font-weight--medium     : 500;
+$font-weight--bold       : 700;
+$font-weight--black      : 900;
+
 // Font Sizes
-$base-font-size: em(16);
+$base-font-size: 16px;
 
 // Line height
 $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
 // Other Sizes
-$base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
+// Border radius
+$base-border-radius : 3px;
+$round-border-radius : 50%;
+
+// Descriptive Base Colors
 $color-white: #fff;
-$black: #000;
+$black: #0b0b0b;
 
 // Colors
-$blue: #1565c0;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
@@ -41,10 +52,14 @@ $color-black : #202020;
 $color-gray  : rgb(153, 153, 153);
 
 
+// Color Usage
 
-// Font Colors
+$color-primary   : $color-purple;
+$color-secondary : $color-teal;
+$color-shadow    : rgba($black, .2);
+
 $base-font-color: $dark-gray;
-$action-color: $blue;
+$action-color: $color-purple_light;
 
 // Border
 $base-border-color: $light-gray;
@@ -61,14 +76,3 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
-
-
-
-
-// Font Weights
-$font-weight--thin       : 100;
-$font-weight--light      : 300;
-$font-weight--regular    : 400;
-$font-weight--medium     : 500;
-$font-weight--bold       : 700;
-$font-weight--black      : 900;

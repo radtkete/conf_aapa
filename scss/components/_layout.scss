@@ -1,3 +1,13 @@
+.bg-base {
+  background-color: $base-background-color;
+}
+
+.bg-secondary {
+  background-color: $secondary-background-color;
+}
+
+
+
 .featured-items {
   @include outer-container;
 }
@@ -43,11 +53,7 @@
 }
 
 .featured__item--title {
-  font-size: em(20px);
-  font-weight: $font-weight--bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: $base-spacing 0 $small-spacing;
+  margin-top: $base-spacing;
 }
 
 .featured__item--descr {
