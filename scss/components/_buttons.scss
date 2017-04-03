@@ -29,8 +29,7 @@ $white_75: rgba($white, .75);
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 1;
-  margin-bottom: 8px;
-  margin-right: 8px;
+  margin: 0 4px 8px;
   padding: $small-spacing $base-spacing;
   position: relative;
   text-align: center;
@@ -41,12 +40,6 @@ $white_75: rgba($white, .75);
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  &:last-child {
-    margin-right: 0;
-  }
-  &:last-of-type {
-    margin-right: 0;
-  }
   &:hover,
   &:focus {
     font-weight: 500;

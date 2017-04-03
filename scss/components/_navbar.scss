@@ -4,8 +4,7 @@ $horizontal-bar-mode: 900px;
 $navigation-background: $dark-gray;
 $navigation-color: transparentize(white, 0.2);
 $navigation-color-hover: white;
-
-
+$navigation-z-index: 1000;
 
 $bar-thickness: 5px;
 // The thickness of the button bars
@@ -34,7 +33,7 @@ $button-transistion-duration: 0.3s;
 
 .navigation {
   background: $navigation-background;
-  z-index: 1000 !important;
+  z-index:$navigation-z-index !important;
 
 
 
@@ -218,6 +217,7 @@ $button-transistion-duration: 0.3s;
 
     a.nav-link {
       @extend %nav-item-link;
+      font-weight: 600;
       @include media($horizontal-bar-mode) {
         display: inline-block;
         height: $navigation-height;
@@ -228,6 +228,7 @@ $button-transistion-duration: 0.3s;
     .submenu {
       display: none;
       width: 100%;
+      z-index: $navigation-z-index;
 
       @include media($horizontal-bar-mode) {
         position: absolute;
@@ -251,6 +252,7 @@ $button-transistion-duration: 0.3s;
 
         a {
           @extend %nav-item-link;
+          text-transform: initial;
           padding: 0 ($small-spacing * 2);
           width: 100%;
           border-left: none;
@@ -271,6 +273,7 @@ $button-transistion-duration: 0.3s;
   border-left: none;
   border-right: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.065);
+  font-size: 14px !important;
 }
 
 .mobile-on a:hover {

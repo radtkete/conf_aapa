@@ -5,10 +5,10 @@
 .featured__item {
   text-align: center;
   margin: ($base-spacing * 2) auto;
+  @include pad($base-spacing * 2);
 
   @include media($medium-up) {
     @include span-columns(8);
-    @include pad($base-spacing * 2);
     margin: 0;
   }
 

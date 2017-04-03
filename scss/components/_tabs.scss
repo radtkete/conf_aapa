@@ -1,0 +1,223 @@
+.container {
+	@include outer-container(1000px);
+}
+
+//colors
+$color_celeste_approx: #ccc;
+$white: #fff;
+$color_tundora_approx: #444;
+
+//fonts
+$font_0: Aileron Bold;
+$font_1: Aileron SemiBold;
+$font_2: icomoon !important;
+
+.tabs-holder {
+	border: 1px solid $color-gray;
+	margin-top: 50px;
+	@include media($xsmall-only) {
+		padding: 10px;
+	}
+}
+.schedules-tab-nav {
+	text-align: center;
+	margin: -45px 0 0;
+	@include media($small-down) {
+		@include clearfix;
+		margin: -30px 0 0;
+	}
+	ul {
+		display: inline-block;
+		border: 1px solid $color-gray;
+		@include media($small-down) {
+			font-size: 14px;
+		}
+
+		li {
+			float: left;
+			border-right: 1px solid $color-gray;
+			&:last-child {
+				margin: 0;
+				border: 0;
+				a::before {
+					background: #fff;
+				}
+			}
+			@include media($xsmall-only) {
+				width: 100%;
+				border-bottom: 1px solid #ccc;
+				border-right: 0;
+			}
+			a {
+				display: block;
+				position: relative;
+				padding: 15px 30px;
+				font-size: 24px;
+				color: $color-purple_light;
+				font-weight: $font-weight--bold;
+				outline: none;
+				background: $white;
+				text-transform: uppercase;
+				@include media($medium-down) {
+					font-size: 18px;
+					padding: 15px;
+				}
+				@include media($small-down) {
+					font-size: 12px;
+					padding: 10px;
+				}
+				span {
+					display: block;
+					font-size: 16px;
+					font-weight: 400;
+					color: $dark-gray;
+					text-transform: uppercase;
+					@include media($medium-down) {
+						font-size: 12px;
+					}
+					@include media($small-down) {
+						font-size: 11px;
+					}
+				}
+			}
+			&.is-active {
+				a {
+					background: $color-purple_light;
+					color: $color-teal;
+					span {
+						color: $white;
+					}
+				}
+				a::after {
+					@include media($small-up) {
+						@include triangle(30px, $color-purple_light, down);
+						content: '';
+						position: absolute;
+						left: 50%;
+						top: 100%;
+						margin-left: -15px;
+					}
+				}
+			}
+		}
+	}
+}
+.tab-content {
+	padding: 30px;
+	@include media($xsmall-only) {
+		padding: 0;
+	}
+	@include media($medium-down) {
+		padding: 30px 20px;
+	}
+	.tab-content-item {
+		@include outer-container;
+	  display: none;
+		&.is-active {
+		  display: block;
+		}
+	}
+}
+
+
+
+
+.event {
+	@include row();
+	@include padding($base-spacing null);
+	border-bottom: 1px solid $light-gray;
+	&:first-of-type {
+		padding-top: 0;
+	}
+	&:last-of-type {
+		border: 0;
+		padding-bottom: 0;
+	}
+	&__time {
+		@include span-columns(6);
+		@include media($xsmall-only) {
+			display: block;
+			width: 100%;
+		}
+	}
+	&__details {
+		@include span-columns(18);
+		@include media($xsmall-only) {
+			display: block;
+			width: 100%;
+		}
+	}
+
+
+
+
+.event__list {
+	@include media($small-up) {
+		margin-left: 2.14285714em;
+	}
+	> li {
+		@include margin(null $base-spacing $small-spacing null);
+		display: inline-block;
+		position: relative;
+		&:last-of-type {
+			margin-right: 0;
+		}
+		@include media($small-up) {
+			display: list-item;
+			margin-right: 0;
+		}
+		i {
+			color: $color-purple_light;
+			padding-right: $small-spacing;
+			@include media($small-up) {
+				@include position(absolute, .14285714em null null -2.14285714em);
+				padding-right: 0;
+		    width: 2.14285714em;
+		    text-align: center;
+			}
+		}
+	}
+}
+
+
+
+h3 {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: $small-spacing;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
