@@ -1,0 +1,65 @@
+
+
+
+
+
+
+.events {
+  @include outer-container;
+
+  .base-headline {
+    @include row;
+  }
+
+  .events__more {
+    float: right;
+    margin-top: 7px;
+    color: #999;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  }
+
+  .event-item {
+    @include span-columns(8);
+
+    img {
+      margin-bottom: $base-spacing;
+    }
+
+    .base-headline {
+      margin-bottom: $base-font-size / 2;
+      color: $color-black;
+    }
+
+    .badges {
+      margin-bottom: $base-font-size;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

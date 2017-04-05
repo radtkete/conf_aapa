@@ -114,7 +114,7 @@
 
 
 
-.event {
+.agenda {
 	@include row();
 	@include padding($base-spacing null);
 	border-bottom: 1px solid $light-gray;
@@ -138,48 +138,37 @@
 			display: block;
 			width: 100%;
 		}
-	}
-
-
-
-
-.event__list {
-	@include media($small-up) {
-		margin-left: 2.14285714em;
-	}
-	> li {
-		@include margin(null $base-spacing $small-spacing null);
-		display: inline-block;
-		position: relative;
-		&:last-of-type {
-			margin-right: 0;
+		.base-headline {
+			line-height: 1;
 		}
+	}
+	&__list {
 		@include media($small-up) {
-			display: list-item;
-			margin-right: 0;
+			margin-left: 2.14285714em;
 		}
-		i {
-			color: $color-purple_light;
-			padding-right: $small-spacing;
+		> li {
+			@include margin(null $base-spacing $small-spacing null);
+			display: inline-block;
+			position: relative;
+			&:last-of-type {
+				margin-right: 0;
+			}
 			@include media($small-up) {
-				@include position(absolute, .14285714em null null -2.14285714em);
-				padding-right: 0;
-		    width: 2.14285714em;
-		    text-align: center;
+				display: list-item;
+				margin-right: 0;
+			}
+			i {
+				color: $color-purple_light;
+				padding-right: $small-spacing;
+				@include media($small-up) {
+					@include position(absolute, .14285714em null null -2.14285714em);
+					padding-right: 0;
+			    width: 2.14285714em;
+			    text-align: center;
+				}
 			}
 		}
 	}
-}
-
-
-
-h3 {
-   	line-height: 1;
-}
-
-
-
-
 }
 
 

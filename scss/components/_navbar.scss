@@ -33,7 +33,8 @@ $button-transistion-duration: 0.3s;
 
 .navigation {
   background: $navigation-background;
-  z-index:$navigation-z-index !important;
+  z-index: $navigation-z-index !important;
+  border-bottom: 2px solid $color-teal;
 
 
 

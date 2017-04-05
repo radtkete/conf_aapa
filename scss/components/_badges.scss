@@ -10,7 +10,7 @@ $badges: (
     text-align: center;
     white-space: nowrap;
     background-color: $color;
-    border-radius: $base-border-radius;
+    border-radius: $small-spacing * 5;
     color: darken($color, 60%);
     display: inline-block;
     font-size: $small-spacing;
