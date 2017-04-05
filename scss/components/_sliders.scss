@@ -152,9 +152,9 @@
   overflow: hidden;
   width: 100%;
   border-bottom: 1px solid $color-gray;
+  background-color: $color-white;
 
   &--item {
-    background-color: $color-white;
     padding-bottom: $base-spacing;
     text-align: center;
 
