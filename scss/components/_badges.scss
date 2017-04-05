@@ -1,0 +1,20 @@
+$badges: (
+  "all": $color-purple_light,
+  "co": $color-teal,
+  "pa": $color-pink,
+  "student": $color-lime,
+) !default;
+
+@each $badge-type, $color in $badges {
+  .badge-#{$badge-type} {
+    text-align: center;
+    white-space: nowrap;
+    background-color: $color;
+    border-radius: $base-border-radius;
+    color: darken($color, 60%);
+    display: inline-block;
+    font-size: $small-spacing;
+    line-height: 1;
+    padding: 0.4em 1.2em;
+  }
+}

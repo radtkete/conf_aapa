@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     uglify: {
         // doesnt need to be called build, we can call it whatever we want 
         build: {
-            src: ['js/vendor/jquery.vide.js', 'js/vendor/jquery.sticky.js', 'js/vendor/smoothscroll.js', 'js/plugins.js', 'js/main.js'],
+            src: ['js/vendor/jquery.vide.js', 'js/vendor/jquery.sticky.js', 'node_modules/slick-carousel/slick/slick.js', 'js/vendor/smoothscroll.js', 'js/plugins.js', 'js/main.js'],
             dest: 'dist/script.min.js',
         },
 
@@ -18,7 +18,7 @@ module.exports = function(grunt) {
                 compress: false,
                 preserveComments: 'all'
             },
-            src: ['js/vendor/jquery.vide.js', 'js/vendor/jquery.sticky.js', 'js/vendor/smoothscroll.js', 'js/plugins.js', 'js/main.js'],
+            src: ['js/vendor/jquery.vide.js', 'js/vendor/jquery.sticky.js', 'node_modules/slick-carousel/slick/slick.js', 'js/vendor/smoothscroll.js', 'js/plugins.js', 'js/main.js'],
             dest: 'dist/script.min.js',
         }
     },

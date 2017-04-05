@@ -1,3 +1,6 @@
+@import "../vendor/slick/slick.scss";
+@import "../vendor/slick/slick-theme.scss";
+
 @import "bourbon";
 @import "neat";
 @import "variables/typography";
@@ -6,7 +9,6 @@
 @import "fonts";
 @import "global";
 @import "components/index";
-
 .span4 {
   @include span-columns(8);
 }

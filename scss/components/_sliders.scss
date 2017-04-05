@@ -1,0 +1,134 @@
+.blog-posts-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.blog-posts-carousel-item {
+  text-align: center;
+  padding-bottom: $base-spacing;
+
+  .event-image-preview {
+    margin-bottom: $base-spacing;
+    position: relative;
+    img {
+      transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
+      width: 100%;
+      display: block;
+      overflow: hidden;
+    }
+  }
+  .event-title-preview {
+    padding: 0 $small-spacing;
+  }
+
+  .event-desc-preview {
+    padding: 0 $small-spacing;
+  }
+}
+
+
+
+
+
+
+//colors
+$color_woodsmoke_approx: #111;
+$white: #fff;
+$black_10: rgba(0, 0, 0, .1);
+
+//@extend-elements
+//original selectors
+//.owl-prev, .owl-next
+%button-extend_1 {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  width: 105px;
+  height: 105px;
+  line-height: 105px;
+  font-size: 24px;
+  text-align: center;
+  color: $color-lime;
+  z-index: 6;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+}
+
+//original selectors
+//.owl-prev:before, .owl-next:before
+%button-extend_2 {
+  content: "";
+  display: block;
+  width: 66%;
+  height: 66%;
+  position: absolute;
+  top: 17px;
+  left: 0;
+  background: $color-pink;
+  border: 2px solid $color-white;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 2px;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 1px 1px 0 $black_10;
+  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: rotate(45deg);
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+}
+
+
+.owl-prev {
+  @extend %button-extend_1;
+  left: -50px;
+  &:before {
+    @extend %button-extend_2;
+  }
+  .fa {
+    position: relative;
+  }
+  &:hover {
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: 0 none !important;
+    &:before {
+      opacity: 0.87;
+    }
+  }
+  &:active:before {
+    opacity: 0.6;
+  }
+}
+.owl-next {
+  @extend %button-extend_1;
+  right: -50px;
+  &:before {
+    @extend %button-extend_2;
+    left: auto;
+    right: 0;
+  }
+  .fa {
+    position: relative;
+  }
+  &:hover {
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: 0 none !important;
+    &:before {
+      opacity: 0.87;
+    }
+  }
+  &:active:before {
+    opacity: 0.6;
+  }
+}
+.blog-posts-carousel:hover {
+  .owl-prev {
+    opacity: 1;
+    left: -35px;
+  }
+  .owl-next {
+    opacity: 1;
+    right: -35px;
+  }
+}

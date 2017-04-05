@@ -77,18 +77,30 @@ body {
 
 .elements-container {
   @include margin(null auto);
-
   @include padding(null $base-spacing);
-
   max-width: 500px;
 }
 
-.welcome-message {
-  @include padding($base-spacing null);
 
-  background-color: #f2f2f2;
-  margin-bottom: $base-spacing;
-  text-align: center;
+
+
+// From Rythem
+iframe{
+    border: none;
+}
+a, b, div, ul, li{
+  -webkit-tap-highlight-color: rgba(0,0,0,0); 
+  -webkit-tap-highlight-color: transparent; 
+  -moz-outline-: none;
+}
+a:focus,
+a:active{
+  -moz-outline: none;
+  outline: none;
+}
+img:not([draggable]), embed, object, video{
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -101,37 +113,6 @@ body {
 
 
 
-
-
-
-
-
-
-.arrow {
-  text-align: center;
-}
-
-.icon-wrap {
-    width: 40px;
-    margin-left: -20px;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    text-align: center;
-    text-decoration: none;
-    transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-> img {
-    width: 40px;
-    margin-left: -20px;
-    position: absolute;
-    bottom: 4px;
-    left: 50%;
-    animation: scroll-down-anim 1s infinite;
-    z-index: 2;
-}
-
-
-}
 
 
 
@@ -197,13 +178,5 @@ $parallax-background-height: $parallax-window-height * 2;
     }
 }
 
-
-
-
-
-
-
-
-// Based on http://codepen.io/skeurentjes/
 
 
