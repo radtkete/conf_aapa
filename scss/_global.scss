@@ -97,10 +97,16 @@ img:not([draggable]), embed, object, video{
   background-size: cover;
   box-sizing: border-box;
   padding: 140px 0;
+  @include media($large-down) {
+    @include padding(null 1em);
+  }
 }
 
 .small-section{
   padding: 70px 0;
+  @include media($large-down) {
+    @include padding(null 1em);
+  }
 }
 
 .gradient-overlay {

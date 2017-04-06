@@ -9,14 +9,18 @@
     float: right;
     margin-top: 7px;
     color: #999;
-    font-size: 11px;
+    font-size: em(11px);
     font-weight: 400;
     letter-spacing: 0.2em;
     transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
   }
-
+  .event-items {
+    @include outer-container;
+  }
   .event-item {
-    @include span-columns(8);
+    @include media($small-up) {
+      @include span-columns(8);
+    }
 
     img {
       margin-bottom: $base-spacing;
@@ -43,38 +47,68 @@
 
 
 .cta-area {
-    background-color: #333;
-    padding: 55px 0;
-    .container {
-      @include outer-container;
+  background-color: $color-black;
+  padding: 55px 0;
+  text-align: center;
+  .container {
+    @include outer-container;
+      @include media($large-down) {
+        @include margin(null 1em);
+      }
+  }
+
+  .col-md-9 {
+    @include media($medium-up) {
+      @include span-columns(16);
+    }
+
+    h2 {
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0 auto $small-spacing;
+      height: auto;
+      vertical-align: middle;
+      color: $color-teal;
+      font-size: em(24px);
+      @include media($medium-up) {
+        margin: 0;
+        text-align: left;
+        font-size: em(28px);
+        line-height: 54px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .col-md-3 {
+    @include media($medium-up) {
+      @include span-columns(8);
+      text-align: right;
+    }
+    .btn {
+      margin: 0;
+      @include media($medium-up) {
+        margin-top: 5px;
+      }
+    }
     }
 }
 
-.cta-area h2 {
-  font-size: 28px;
-  line-height: 54px;
-  letter-spacing: 2px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 0;
-  height: auto;
-  vertical-align: middle;
-  color: $color-teal;
-
-}
-
-.cta-btn {
-    margin-top: 5px;
-}
 .col-md-9 {
-  @include span-columns(16);
+  @include media($medium-up) {
+    @include span-columns(16);
+  }
 }
 
 .col-md-3 {
-  @include span-columns(8);
-  text-align: right;
+  @include media($medium-up) {
+    @include span-columns(8);
+    text-align: right;
+  }
+  .cta-btn {
+    margin-top: 5px;
+  } 
 }
-
 
 
 

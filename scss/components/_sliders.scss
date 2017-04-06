@@ -131,6 +131,7 @@
 
 
 .special-events {
+  @include padding(null 0);
 
   .section-title {
     margin-bottom: 30px;
