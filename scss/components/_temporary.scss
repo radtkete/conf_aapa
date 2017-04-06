@@ -25,12 +25,54 @@
     .base-headline {
       margin-bottom: $base-font-size / 2;
       color: $color-black;
+      font-size: em(18px);
     }
 
     .badges {
       margin-bottom: $base-font-size;
     }
   }
+}
+
+
+
+
+
+
+
+
+
+.cta-area {
+    background-color: #333;
+    padding: 55px 0;
+    .container {
+      @include outer-container;
+    }
+}
+
+.cta-area h2 {
+  font-size: 28px;
+  line-height: 54px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  height: auto;
+  vertical-align: middle;
+  color: $color-teal;
+
+}
+
+.cta-btn {
+    margin-top: 5px;
+}
+.col-md-9 {
+  @include span-columns(16);
+}
+
+.col-md-3 {
+  @include span-columns(8);
+  text-align: right;
 }
 
 
