@@ -7,7 +7,7 @@ $(document).ready(function(){
             "height": 720,
             "path": "video/",
             "filename": "newOrleans",
-            "types": ["mp4", "ogg", "webm"],
+            "types": ["mp4", "ogv", "webm"],
             "autoplay": true,
             "loop": true
         });

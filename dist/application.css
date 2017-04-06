@@ -6,7 +6,6 @@
   box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -34,10 +33,6 @@
 
 .slick-slider .slick-track,
 .slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -129,8 +124,6 @@
   background: transparent;
   color: transparent;
   top: 50%;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
   padding: 0;
   border: none;
@@ -328,41 +321,6 @@
 }
 
 /* Scroll down icon */
-@-webkit-keyframes scroll-down-anim {
-  0% {
-    bottom: 2px;
-  }
-  50% {
-    bottom: 7px;
-  }
-  100% {
-    bottom: 2px;
-  }
-}
-
-@-moz-keyframes scroll-down-anim {
-  0% {
-    bottom: 2px;
-  }
-  50% {
-    bottom: 7px;
-  }
-  100% {
-    bottom: 2px;
-  }
-}
-
-@-o-keyframes scroll-down-anim {
-  0% {
-    bottom: 2px;
-  }
-  50% {
-    bottom: 7px;
-  }
-  100% {
-    bottom: 2px;
-  }
-}
 
 @keyframes scroll-down-anim {
   0% {
@@ -455,14 +413,10 @@ html {
 }
 
 .mask-delay {
-  -webkit-animation-delay: 0.75s;
-  -moz-animation-delay: 0.75s;
   animation-delay: 0.75s;
 }
 
 .mask-speed {
-  -webkit-animation-duration: 0.25s !important;
-  -moz-animation-duration: 0.25s !important;
   animation-duration: 0.25s !important;
 }
 
@@ -524,11 +478,6 @@ img:not([draggable]), embed, object, video {
   width: 100%;
   height: 100%;
   background: #1eb089;
-  background: -moz-linear-gradient(left, #1eb089 0%, #7c49ab 100%, #7db9e8 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #1eb089), color-stop(100%, #7c49ab), color-stop(100%, #7db9e8));
-  background: -webkit-linear-gradient(left, #1eb089 0%, #7c49ab 100%, #7db9e8 100%);
-  background: -o-linear-gradient(left, #1eb089 0%, #7c49ab 100%, #7db9e8 100%);
-  background: -ms-linear-gradient(left, #1eb089 0%, #7c49ab 100%, #7db9e8 100%);
   background: linear-gradient(to right, #1eb089 0%, #7c49ab 100%, #7db9e8 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1eb089', endColorstr='#7db9e8', GradientType=1);
 }
@@ -544,7 +493,9 @@ img:not([draggable]), embed, object, video {
 button, input[type="button"], input[type="reset"], input[type="submit"],
 .btn {
   -webkit-font-smoothing: antialiased;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: rgba(34, 34, 34, 0.9);
   background-image: none;
   border-color: #007095;
@@ -565,9 +516,13 @@ button, input[type="button"], input[type="reset"], input[type="submit"],
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   transition: background-color 150ms ease;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   vertical-align: middle;
   white-space: nowrap;
 }
@@ -844,7 +799,8 @@ textarea {
 
 input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea {
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   background-color: #fff;
   border: 1px solid #ddd;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
@@ -871,6 +827,14 @@ input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"
 
 input[type="color"]:disabled:hover, input[type="date"]:disabled:hover, input[type="datetime"]:disabled:hover, input[type="datetime-local"]:disabled:hover, input[type="email"]:disabled:hover, input[type="month"]:disabled:hover, input[type="number"]:disabled:hover, input[type="password"]:disabled:hover, input[type="search"]:disabled:hover, input[type="tel"]:disabled:hover, input[type="text"]:disabled:hover, input[type="time"]:disabled:hover, input[type="url"]:disabled:hover, input[type="week"]:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover {
   border: 1px solid #ddd;
+}
+
+input[type="color"]::-webkit-input-placeholder, input[type="date"]::-webkit-input-placeholder, input[type="datetime"]::-webkit-input-placeholder, input[type="datetime-local"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="month"]::-webkit-input-placeholder, input[type="number"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder, input[type="text"]::-webkit-input-placeholder, input[type="time"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder, input[type="week"]::-webkit-input-placeholder, input:not([type])::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #858585;
+}
+
+input[type="color"]:-ms-input-placeholder, input[type="date"]:-ms-input-placeholder, input[type="datetime"]:-ms-input-placeholder, input[type="datetime-local"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="month"]:-ms-input-placeholder, input[type="number"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, input[type="search"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="text"]:-ms-input-placeholder, input[type="time"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder, input[type="week"]:-ms-input-placeholder, input:not([type]):-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #858585;
 }
 
 input[type="color"]::placeholder, input[type="date"]::placeholder, input[type="datetime"]::placeholder, input[type="datetime-local"]::placeholder, input[type="email"]::placeholder, input[type="month"]::placeholder, input[type="number"]::placeholder, input[type="password"]::placeholder, input[type="search"]::placeholder, input[type="tel"]::placeholder, input[type="text"]::placeholder, input[type="time"]::placeholder, input[type="url"]::placeholder, input[type="week"]::placeholder, input:not([type])::placeholder, textarea::placeholder {
@@ -2172,23 +2136,12 @@ hr {
 }
 
 .skills path {
-  -webkit-transform-origin: 187px 187px;
-  -moz-transform-origin: 187px 187px;
-  -o-transform-origin: 187px 187px;
-  -ms-transform-origin: 187px 187px;
   transform-origin: 187px 187px;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
 .skills-item > h3:hover + svg path,
 .skills:hover path {
-  -webkit-transform: rotate(-30deg);
-  -moz-transform: rotate(-30deg);
-  -o-transform: rotate(-30deg);
-  -ms-transform: rotate(-30deg);
   transform: rotate(-30deg);
 }
 
@@ -2651,6 +2604,7 @@ Home sections
  * Tabs navigation
  */
 .c-tabs-nav {
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
   margin: 0;
@@ -2658,13 +2612,13 @@ Home sections
 }
 
 .c-tabs-nav__link {
-  flex: 1;
+  -ms-flex: 1;
+      flex: 1;
   margin-right: 4px;
   padding: 12px;
   color: #fff;
   background-color: #b3b3b3;
   text-align: center;
-  -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
@@ -2722,6 +2676,7 @@ Home sections
 }
 
 .c-tab__content {
+  padding: 24px;
   padding: 1.5rem;
 }
 
@@ -2734,11 +2689,11 @@ Home sections
 
 .c-tabs.no-js .c-tab {
   display: block;
+  margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
 
 .c-tabs.no-js .c-tab:last-child {
   margin-bottom: 0;
 }
-
 /*# sourceMappingURL=application.css.map */
