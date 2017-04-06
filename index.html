@@ -22,18 +22,25 @@
   <!--[if lt IE 8]>
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-  <section class="home-section gradient-overlay">
-    <div id="video-bg" class="js-height-full">
+
+<!-- Page Wrap -->
+<div class="page" id="top">
+
+  <!-- Home Section -->
+  <section class="home-section bg-dark" data-background="video/newOrleans.jpg" id="home">
+    <div class="js-height-full container">
+      <!-- Video BG Init -->
+      <!-- Please, replace three video files in folder "video" with your own ones -->
+      <div class="bg-video-wrapper" id="video-background-1">
+        <div class="bg-video-overlay bg-dark-alfa-50"></div>
+      </div>
+      <!-- End Video BG Init -->
       <!-- Hero Content -->
       <div class="home-content">
         <div class="home-text">
-          
-          <img src="img/logo_small.svg" style="
-          width: 600px;
-          vertical-align: middle;
-          display: block;
-          margin: 0 auto 60px;
-          ">
+
+          <img class="hero__logo" src="img/logo_small.svg">
+
           <ul class="countdown" data-finish-date="05/15/2017 12:00:00" data-utc="2" data-finish-message="We have already started!">
             <li>
               <span class="countdown__number">
@@ -60,25 +67,24 @@
               </span>
             </li>
           </ul>
-          
+
           <div class="local-scroll">
-            <a href="#" style="width: 190px;" class="btn btn-lg btn-border-w hidden-xs">Learn More</a>
+            <a href="#" class="btn btn-lg">See More</a>
             <span class="hidden-xs">&nbsp;</span>
-            <a href="#" style="width: 190px;" class="btn btn-lg btn-border-w hidden-xs">Register</a>
+            <a href="#" class="btn btn-lg">Play Reel</a>
           </div>
-          
+
         </div>
       </div>
-      <!-- END // Hero Content -->
+      <!-- End Hero Content -->
       <!-- Scroll Down -->
-      <div class="arrow bounce">
-        <a class="icon-wrap" href="#scroll-to-head">
+        <a class="arrow" href="#scroll-to-head">
           <img src="img/icons/scroll-icon.svg" alt="" />
         </a>
-      </div>
-      <!-- END // Scroll Down -->
+      <!-- End Scroll Down -->
     </div>
   </section>
+  <!-- End Home Section -->
   <header id="scroll-to-head" class="navigation" role="banner">
     <section class="navigation-wrapper-top">
       <a href="javascript:void(0)" class="logo">
@@ -170,9 +176,7 @@
       </div>
     </section>
   </header>
-  
-  <!-- Page Wrap -->
-  <div style="height: 4000px;">
+
 
     <!-- Intro Text -->
     <section class="small-section bg-secondary">
@@ -182,13 +186,8 @@
       </div>
     </section>
     <!-- END // Intro Text -->
-
-
-
-
     <!-- Tri Features Section -->
     <div class="featured-items">
-      
       <!-- Features Item -->
       <div class="featured__item">
         <div class="featured__item--icon">
@@ -201,7 +200,6 @@
         <a href="#" class="btn btn-sm">Explore</a>
       </div>
       <!-- END // Features Item -->
-      
       <!-- Features Item -->
       <div class="featured__item">
         <div class="featured__item--icon">
@@ -215,7 +213,6 @@
         <a href="#" class="btn btn-sm">Exhibitor</a>
       </div>
       <!-- END // Features Item -->
-
       <!-- Features Item -->
       <div class="featured__item">
         <div class="featured__item--icon">
@@ -229,16 +226,11 @@
         <a href="#" class="btn btn-sm">Learn More</a>
       </div>
       <!-- END // Features Item -->
-      
     </div>
     <!-- END // Tri Features Section -->
-
-
-
     <!-- Schedule Tabs -->
     <section class="small-section bg-secondary">
       <div class="container">
-        
         <div id="tabs" class="tabs-holder">
           <!-- Tab Nav -->
           <div class="schedules-tab-nav" role="tablist">
@@ -354,9 +346,6 @@
       </div>
     </section>
     <!-- END // Schedule Tabs -->
-
-
-
     <!-- Parallax CME -->
     <div id="js-parallax-window" class="parallax-window">
       <div class="parallax-static-content">
@@ -365,24 +354,16 @@
       <div id="js-parallax-background" class="parallax-background"></div>
     </div>
     <!-- END // Parallax CME -->
-
-
-
-<div class="cta-area">
-  <div class="container">
-
-      <div class="col-md-9">
-        <h2>Placeholder headline about CME & Events</h2>
+    <div class="cta-area">
+      <div class="container">
+        <div class="col-md-9">
+          <h2>Placeholder headline about CME & Events</h2>
+        </div>
+        <div class="col-md-3 text-right">
+          <a href="" class="btn btn-lg btn-color cta-btn">Search CME & Events</a>
+        </div>
       </div>
-      <div class="col-md-3 text-right">
-        <a href="" class="btn btn-lg btn-color cta-btn">Search CME & Events</a>
-      </div>
-
-  </div>
-</div>
-
-
-
+    </div>
     <!-- Events Section #1 -->
     <section class="page-section" id="events">
       <div class="events">
@@ -391,7 +372,6 @@
         <a href="#" class="events__more">View All Events <i class="fa fa-angle-right"></i></a>
         </h2>
         <div class="event-items">
-          
           <div class="event-item">
             <a href="#">
               <img src="img/images/blog-1.jpg" alt="" />
@@ -441,9 +421,6 @@
       </div>
     </section>
     <!-- END // Events Section #1 -->
-
-
-
     <!-- Events Section #2 -->
     <section class="page-section special-events bg-secondary">
       <div class="section-title">
@@ -507,34 +484,181 @@
         <!-- END // Post Item -->
       </div>
     </section>
-   <!-- END // Events Section #2 -->
+    <!-- END // Events Section #2 -->
+    <section class="page-section" >
+      <div class='sponsorsFooter'>
+        <h1 id="sponsorTitle" class="base-headline" data-default-title="<strong>Our Sponsors</strong>">
+        <strong>Our Sponsors</strong>
+        </h1>
+        <ul>
+          <span data-group-title="Gold Sponsor">
+            <li><img src="img/logos/fake-sponser.png" ></li>
+          </span>
+          <span data-group-title="Silver Sponsors">
+            <li><img src="img/logos/fake-sponser.png" ></li>
+            <li><img src="img/logos/fake-sponser.png" ></li>
+          </span>
+          <span data-group-title="Bronze Sponsors">
+            <li><img src="img/logos/fake-sponser.png" ></li>
+            <li><img src="img/logos/fake-sponser.png" ></li>
+            <li><img src="img/logos/fake-sponser.png" ></li>
+          </span>
+        </ul>
+      </div>
+    </section>
 
 
 
-<section class="page-section" >
+
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+  <symbol id="huddle" viewBox="0 0 50 50.9">
+    <title>huddle-logo</title>
+    <circle class="huddle-orange" cx="25" cy="7.8" r="7.8"/>
+    <circle class="huddle-blue" cx="25" cy="25.5" r="7.8"/>
+    <circle class="huddle-orange" cx="25" cy="43.1" r="7.8"/>
+    <circle class="huddle-blue" cx="7.8" cy="7.8" r="7.8"/>
+    <circle class="huddle-blue" cx="7.8" cy="25.5" r="7.8"/>
+    <circle class="huddle-blue" cx="7.8" cy="43.1" r="7.8"/>
+    <circle class="huddle-blue" cx="42.2" cy="7.8" r="7.8"/>
+    <circle class="huddle-blue" cx="42.2" cy="25.5" r="7.8"/>
+    <circle class="huddle-blue" cx="42.2" cy="43.1" r="7.8"/>
+  </symbol>
+
+  <symbol id="linkedin" viewBox="0 0 512 512">
+    <title>linkedin</title>
+    <path d="M68.12,4.267c-18.773,0-35.84,6.827-48.64,19.627C5.827,37.547-1,54.613-1,72.533c0,18.773,7.68,35.84,20.48,48.64 c12.8,12.8,30.72,20.48,47.787,19.627c0,0,0.853,0,1.707,0c17.067,0,33.28-6.827,46.08-19.627 c12.8-12.8,20.48-29.867,20.48-48.64c0.853-17.92-6.827-34.987-19.627-47.787C103.107,11.093,86.04,4.267,68.12,4.267z M103.107,109.227c-9.387,9.387-22.187,15.36-35.84,14.507c-12.8,0-26.453-5.12-35.84-14.507 c-10.24-9.387-15.36-23.04-15.36-36.693s5.12-26.453,15.36-36.693c9.387-9.387,22.187-14.507,36.693-14.507 c12.8,0,25.6,5.12,34.987,14.507c10.24,10.24,15.36,23.04,15.36,36.693S113.347,99.84,103.107,109.227z"/>
+    <path d="M101.4,157.867H32.28c-13.653,0-24.747,11.093-24.747,25.6v298.667c0,13.653,11.947,25.6,25.6,25.6H101.4 c13.653,0,25.6-11.947,25.6-24.747v-299.52C127,169.813,115.053,157.867,101.4,157.867z M109.933,482.987 c0,4.267-4.267,7.68-8.533,7.68H33.133c-4.267,0-8.533-4.267-8.533-8.533V183.467c0-4.267,3.413-8.533,7.68-8.533h69.12 c4.267,0,8.533,4.267,8.533,8.533V482.987z"/>
+    <path d="M391.533,149.333h-17.92c-33.28,0-64.853,14.507-85.333,37.547v-11.947c0-8.533-8.533-17.067-17.067-17.067H185.88 c-7.68,0-17.067,6.827-17.067,16.213v318.293c0,9.387,9.387,15.36,17.067,15.36h93.867c7.68,0,17.067-5.973,17.067-15.36v-184.32 c0-28.16,20.48-50.347,46.933-50.347c13.653,0,26.453,5.12,35.84,14.507c8.533,7.68,11.947,19.627,11.947,34.987v183.467 c0,8.533,8.533,17.067,17.067,17.067h85.333c8.533,0,17.067-8.533,17.067-17.067v-220.16 C511,202.24,458.947,149.333,391.533,149.333z M493.933,489.813l-0.853,0.853h-83.627L408.6,307.2 c0-20.48-5.12-35.84-16.213-46.933c-12.8-12.8-29.867-19.627-47.787-19.627c-35.84,0.853-64,29.867-64,67.413v182.613h-93.867 V174.933h84.48l0.853,0.853v53.76l23.04-23.04l0.853-0.853c17.067-23.893,46.933-39.253,78.507-39.253h17.92 c57.173,0,101.547,46.08,101.547,104.107V489.813z"/>
+  </symbol>
+
+  <symbol id="youtube" viewBox="0 0 511.147 511.147">
+    <title>youtube</title>
+    <path d="M505.027,146.2c0-1.707-5.12-39.253-21.333-57.173c-19.627-21.333-40.96-23.893-52.053-24.747h-3.413 c-69.12-5.12-172.373-5.973-174.08-5.973c-0.853,0-104.96,0.853-173.227,7.68h-2.56C66.413,66.84,45.08,69.4,26.307,90.733 C9.24,108.653,4.12,147.053,4.12,148.76c0,0-5.12,43.52-5.12,87.04v40.107c0,42.667,5.12,86.187,5.12,87.04 c0,1.707,5.12,39.253,21.333,57.173c17.92,20.48,39.253,23.04,52.907,24.747c2.56,0,4.267,0,6.827,0.853 c39.253,3.413,163.84,5.12,168.96,5.12c0.853,0,104.96,0,174.08-7.68h2.56c11.947-0.853,33.28-3.413,52.053-24.747 c17.067-17.92,22.187-56.32,22.187-58.027c0,0,5.12-43.52,5.12-87.04V233.24C510.147,190.573,505.027,147.053,505.027,146.2z M493.08,275.053c0,42.667-5.12,85.333-5.12,85.333c-1.707,9.387-6.827,36.693-17.92,48.64 c-14.507,17.067-31.573,18.773-40.96,19.627h-2.56c-68.267,5.12-171.52,5.12-172.373,5.12s-128.853-1.707-166.4-5.973 c-2.56,0-5.12-0.853-7.68-0.853c-11.947-0.853-29.013-3.413-42.667-18.773c-10.24-11.093-16.213-38.4-17.067-47.787 c0-0.853-5.12-43.52-5.12-85.333v-40.107c0-42.667,5.12-85.333,5.12-85.333c0.853-9.387,6.827-36.693,17.067-48.64 C52.76,83.907,68.973,82.2,79.213,81.347h2.56c68.267-5.12,171.52-5.973,172.373-5.973s104.107,0.853,172.373,5.973h3.413 c9.387,0.853,26.453,2.56,40.96,19.627c10.24,11.947,15.36,39.253,17.067,48.64c0.853,1.707,5.12,44.373,5.12,85.333V275.053z"/>
+    <path d="M360.813,255.427l-162.133-94.72c-2.56-1.707-5.973-1.707-8.533,0s-4.267,4.267-4.267,7.68V353.56 c0,3.413,1.707,5.973,4.267,7.68c1.707,0.853,2.56,0.853,4.267,0.853s2.56,0,4.267-0.853l162.133-90.453 c2.56-1.707,4.267-4.267,4.267-7.68S363.373,257.133,360.813,255.427z M202.947,339.053v-156.16l136.533,80.213L202.947,339.053z "/>
+  </symbol>
+
+  <symbol id="facebook" viewBox="0 0 512 512">
+    <title>facebook</title>
+    <path d="M468.333-1H41.667C17.773-1-1,17.773-1,41.667v426.667C-1,492.227,17.773,511,41.667,511h196.267h102.4h128 C492.227,511,511,492.227,511,468.333V41.667C511,17.773,492.227-1,468.333-1z M255,493.933V323.267h-68.267V255H255v-59.733 c0-48.64,37.547-89.6,85.333-93.867h76.8v68.267h-68.267c-14.507,0-25.6,11.093-25.6,25.6V255H408.6v68.267h-85.333v170.667H255z M493.933,468.333c0,14.507-11.093,25.6-25.6,25.6h-128v-153.6h85.333v-102.4h-85.333v-42.667c0-5.12,3.413-8.533,8.533-8.533 H434.2v-102.4h-94.72c-57.173,5.12-101.547,53.76-101.547,110.933v42.667h-68.267v102.4h68.267v153.6H41.667 c-14.507,0-25.6-11.093-25.6-25.6V41.667c0-14.507,11.093-25.6,25.6-25.6h426.667c14.507,0,25.6,11.093,25.6,25.6V468.333z"/>
+  </symbol>
+
+  <symbol id="twitter" viewBox="0 0 511.271 511.271">
+    <title>twitter</title>
+    <path d="M508.342,94.243c-2.603-2.603-6.942-3.471-10.414-2.603l-17.356,6.075c10.414-12.149,17.356-25.166,21.695-37.315 c1.736-4.339,0.868-7.81-1.736-10.414c-2.603-2.603-6.942-3.471-10.414-1.736c-24.298,10.414-45.125,19.092-62.481,24.298 c0,0.868-0.868,0-1.736,0c-13.885-7.81-47.729-25.166-72.027-25.166c-61.614,0.868-111.078,52.936-111.078,116.285v3.471 c-90.251-17.356-139.715-43.39-193.519-99.797L40.6,58.663l-5.207,10.414c-29.505,56.407-8.678,107.607,25.166,142.319 c-15.62-2.603-26.034-7.81-35.58-15.62c-3.471-2.603-7.81-3.471-12.149-0.868c-3.471,1.736-5.207,6.942-4.339,11.281 c12.149,40.786,42.522,73.763,75.498,93.722c-15.62,0-28.637-1.736-41.654-10.414c-3.471-1.736-8.678-1.736-12.149,0.868 s-5.207,6.942-3.471,11.281c15.62,44.258,45.993,67.688,94.59,73.763c-25.166,14.753-58.142,26.902-109.342,27.77 c-5.207,0-9.546,3.471-11.281,7.81c-1.736,5.207,0,9.546,3.471,13.017c31.241,25.166,100.664,39.919,186.576,39.919 c152.732,0,277.695-136.244,277.695-303.729v-2.603c19.092-9.546,34.712-27.77,42.522-52.936 C511.813,101.185,510.945,96.846,508.342,94.243z M456.274,143.707l-5.207,1.736v14.753 c0,157.939-117.153,286.373-260.339,286.373c-78.97,0-131.905-13.017-160.542-26.902c59.878-4.339,94.59-23.431,121.492-44.258 l21.695-15.62h-26.034c-49.464,0-79.837-13.885-97.193-46.861c15.62,5.207,32.108,5.207,50.332,4.339 c6.942-0.868,13.885-0.868,20.827-0.868l2.603-17.356c-32.976-9.546-72.027-39.051-91.119-78.969 c17.356,7.81,36.447,9.546,53.803,9.546h26.902L91.8,213.999c-18.224-13.017-72.027-59.01-45.993-124.963 c55.539,54.671,108.475,79.837,203.932,97.193l10.414,1.736v-24.298c0-53.803,41.654-98.061,93.722-98.929 c19.959-0.868,52.936,17.356,62.481,22.563c5.207,2.603,10.414,3.471,15.62,1.736c13.017-4.339,28.637-10.414,45.993-17.356 c-7.81,13.017-18.224,25.166-32.108,36.448c-3.471,2.603-4.339,7.81-2.603,12.149c1.736,4.339,6.942,6.075,11.281,4.339 l33.844-11.281C482.308,124.616,472.762,137.633,456.274,143.707z"/>
+  </symbol>
+
+  <symbol id="instagram" viewBox="0 0 512 512">
+    <title>social-media</title>
+    <path d="M365.08-1H144.92C64.707-1-1,64.707-1,144.92v220.16C-1,445.293,64.707,511,144.92,511h220.16 C445.293,511,511,445.293,511,365.08V144.92C511,64.707,445.293-1,365.08-1z M493.933,365.08 c0,70.827-58.027,128.853-128.853,128.853H144.92c-70.827,0-128.853-58.027-128.853-128.853V144.92 c0-70.827,58.027-128.853,128.853-128.853h220.16c70.827,0,128.853,58.027,128.853,128.853V365.08z"/>
+    <path d="M365.08,50.2H144.92c-52.053,0-94.72,42.667-94.72,94.72v220.16c0,52.053,42.667,94.72,94.72,94.72h220.16 c52.053,0,94.72-42.667,94.72-94.72V144.92C459.8,92.867,417.133,50.2,365.08,50.2z M442.733,365.08 c0,42.667-34.987,77.653-77.653,77.653H144.92c-42.667,0-77.653-34.987-77.653-77.653V144.92 c0-42.667,34.987-77.653,77.653-77.653h220.16c42.667,0,77.653,34.987,77.653,77.653V365.08z"/>
+    <path d="M255,118.467c-75.093,0-136.533,61.44-136.533,136.533S179.907,391.533,255,391.533S391.533,330.093,391.533,255 S330.093,118.467,255,118.467z M255,374.467c-65.707,0-119.467-53.76-119.467-119.467S189.293,135.533,255,135.533 S374.467,189.293,374.467,255S320.707,374.467,255,374.467z"/>
+    <path d="M255,161.133c-52.053,0-93.867,41.813-93.867,93.867c0,52.053,41.813,93.867,93.867,93.867s93.867-41.813,93.867-93.867 S307.053,161.133,255,161.133z M255,331.8c-42.667,0-76.8-34.133-76.8-76.8c0-42.667,34.133-76.8,76.8-76.8 c42.667,0,76.8,34.133,76.8,76.8C331.8,297.667,297.667,331.8,255,331.8z"/>
+    <path d="M391.533,92.867c-14.507,0-25.6,11.093-25.6,25.6s11.093,25.6,25.6,25.6c14.507,0,25.6-11.093,25.6-25.6 S406.04,92.867,391.533,92.867z"/>
+  </symbol>
+
+  <symbol id="snapchat" viewBox="0 0 512.853 512.853">
+    <title>snapchat</title>
+    <path d="M500.907,376.747c-64.853-11.093-93.867-75.947-97.28-83.627v-0.853c-3.413-6.827-4.267-11.947-2.56-16.213 c3.413-7.68,17.92-12.8,27.307-15.36c2.56-0.853,5.12-1.707,6.827-2.56c17.92-7.68,27.307-17.067,27.307-28.16 c0-8.533-6.827-17.067-17.067-20.48c-3.413-1.707-7.68-2.56-11.947-2.56c-2.56,0-6.827,0.853-11.093,2.56 c-8.533,3.413-15.36,5.973-20.48,5.973c-1.707,0-3.413,0-5.12-0.853c0.853-2.56,0.853-5.12,0.853-8.533v-1.707 c1.707-34.987,5.12-78.507-6.827-104.107c-34.987-76.8-107.52-82.773-128.853-82.773h-10.24c-21.333,0-93.867,5.973-128,82.773 c-11.947,25.6-9.387,69.12-6.827,104.107c0.853,3.413,0.853,6.827,0.853,10.24c-1.707,0-4.267,0.853-6.827,0.853 c-6.827,0-13.653-1.707-22.187-5.973c-11.947-5.12-34.987,2.56-37.547,17.92c-1.707,8.533,1.707,20.48,27.307,30.72 c1.707,0.853,4.267,1.707,7.68,2.56c8.533,2.56,23.04,7.68,26.453,15.36c1.707,3.413,0.853,9.387-2.56,16.213 c-1.707,2.56-31.573,71.68-98.987,82.773C4.267,376.747,0,382.72,0,389.547c0,2.56,0.853,4.267,1.707,5.973 c5.12,13.653,27.307,22.187,67.413,29.013c0.853,2.56,1.707,7.68,2.56,10.24c0.853,3.413,1.707,7.68,2.56,11.947 c0.853,4.267,5.12,11.093,15.36,11.093c3.413,0,7.68-0.853,11.947-1.707c6.827-1.707,15.36-3.413,26.453-3.413 c6.827,0,12.8,0.853,19.627,2.56c11.947,1.707,23.04,9.387,34.987,17.92c17.92,12.8,34.133,22.187,67.413,22.187 c0.853,0,1.707,0,2.56,0s2.56,0,3.413,0c29.013,0,54.613-7.68,76.8-22.187c11.947-7.68,23.04-16.213,34.987-17.92 c5.973-0.853,12.8-1.707,18.773-1.707c10.24,0,18.773,0.853,26.453,2.56c5.12,0.853,9.387,1.707,12.8,1.707 c6.827,0,12.8-4.267,14.507-11.093c0.853-4.267,1.707-7.68,2.56-11.947c0.853-1.707,1.707-6.827,2.56-9.387 c40.107-5.973,59.733-15.36,65.707-28.16c0.853-1.707,1.707-4.267,1.707-5.973C512.853,384.427,507.733,377.6,500.907,376.747z M440.32,408.32c-10.24,0.853-11.947,11.093-14.507,22.187c-0.853,2.56-1.707,5.973-2.56,9.387c-1.707,0-4.267,0-8.533-0.853 c-8.533-1.707-17.92-3.413-29.867-3.413c-6.827,0-13.653,0.853-21.333,1.707c-15.36,2.56-29.013,11.947-41.813,21.333 C302.933,472.32,281.6,478.293,256,478.293c-0.853,0-1.707,0-3.413,0c-0.231,0-0.445,0-0.64,0c-0.073,0-0.146,0-0.213,0 c-28.16,0-41.813-8.533-58.027-19.627c-12.8-9.387-25.6-18.773-41.813-21.333c-6.827-0.853-14.507-1.707-21.333-1.707 c-12.8,0-23.04,1.707-29.867,3.413c-3.413,0.853-5.973,1.707-8.533,1.707c-0.853-3.413-1.707-6.827-2.56-10.24 c-2.56-11.093-4.267-21.333-14.507-23.04c-37.547-5.12-50.347-12.8-54.613-16.213c69.973-14.507,102.4-82.773,106.667-92.16 c5.12-11.093,5.973-21.333,2.56-29.867c-6.827-15.36-25.6-21.333-37.547-24.747c-2.56,0-4.267-0.853-5.973-1.707 C71.68,236.8,69.12,231.68,69.12,230.827c0-2.56,5.973-5.973,11.093-5.973c1.707,0,2.56,0,2.56,0 c10.24,5.12,20.48,7.68,29.013,7.68c12.8,0,19.627-5.973,21.333-7.68s2.56-3.413,2.56-5.973c0-5.12-0.853-10.24-0.853-15.36 c-2.56-33.28-5.12-74.24,5.12-96.427c29.867-67.413,93.867-72.533,112.64-72.533h8.533h0.853c18.773,0,82.773,5.12,113.493,70.827 c9.387,22.187,6.827,63.147,5.12,96.427v1.707c0,5.12-0.853,9.387-0.853,13.653c0,2.56,0.853,5.12,2.56,6.827 c1.707,1.707,7.68,6.827,20.48,7.68c8.533-0.853,17.067-3.413,27.307-7.68c1.707-0.853,5.973-0.853,9.387,0.853 c4.267,1.707,5.973,4.267,5.973,5.12c0,1.707-3.413,6.827-17.067,11.947c-1.707,0.853-4.267,1.707-6.827,2.56 c-11.093,3.413-29.867,9.387-36.693,24.747c-4.267,8.533-2.56,18.773,2.56,29.867c3.413,8.533,34.987,78.507,105.813,93.013 C488.96,395.52,477.013,402.347,440.32,408.32z"/>
+  </symbol>
+</svg>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-logo">
+    <img src="img/logo_small.svg" alt="footer-logo">
+  </div>
+
+  <nav class="footer__nav">
+    <ul>
+      <li class="footer__nav--item">
+        <a href="#">About AAPA</a>
+      </li>
+      <li class="footer__nav--item">
+        <a href="#">Our Sponsors</a>
+      </li>
+      <li class="footer__nav--item">
+        <a href="#">Event FAQs</a>
+      </li>
+      <li class="footer__nav--item">
+        <a href="#">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+
+<!--   <div class="footer-social-links mb-110 mb-xs-60">
+    <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+    <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <a href="#" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+    <a href="#" title="Youtube" target="_blank"><i class="fa fa-youtube"></i></a>
+    <a href="#" title="Snapchat" target="_blank"><i class="fa fa-snapchat-ghost"></i></a>
+  </div> -->
+
+
+  <div class="footer-social-links mb-110 mb-xs-60">
+    <a href="#" title="Facebook" target="_blank">
+      <svg viewBox="0 0 100 100" class="iconnn huddle-svg">
+        <use xlink:href="#huddle"></use>
+      </svg>
+    </a>
+    <a href="#" title="Twitter" target="_blank">
+      <svg viewBox="0 0 100 100" class="iconnn">
+        <use xlink:href="#linkedin"></use>
+      </svg>
+    </a>
+    <a href="#" title="LinkedIn+" target="_blank">
+      <svg viewBox="0 0 100 100" class="iconnn">
+        <use xlink:href="#snapchat"></use>
+      </svg>
+    </a>
+    <a href="#" title="Instagram" target="_blank">
+      <svg viewBox="0 0 100 100" class="iconnn">
+        <use xlink:href="#youtube"></use>
+      </svg>
+    </a>
+    <a href="#" title="Youtube" target="_blank">
+      <svg viewBox="0 0 100 100" class="iconnn">
+        <use xlink:href="#twitter"></use>
+      </svg>
+    </a>
+    <a href="#" title="Snapchat" target="_blank">
+      <svg viewBox="0 0 100 100" class="iconnn">
+        <use xlink:href="#facebook"></use>
+      </svg>
+    </a>
+  </div>
+
+
+  <hr>
+
+  <div class="disclaimer">
+    <div class="disclaimer-logo">
+      <img src="img/aapa-logo-white.svg">
+    </div>
+    <div class="disclaimer-text">
+        <p>AAPA is the national organization that advocates for all PAs and provides tools to improve PA practice and patient care. </p>
+    </div>
+  </div>
   
-
-<div class='sponsorsFooter'>
-  <h1 id="sponsorTitle" class="base-headline" data-default-title="<strong>Our Sponsors</strong>">
-    <strong>Our Sponsors</strong>
-  </h1>
-  <ul>
-    <span data-group-title="Gold Sponsor">
-      <li><img src="img/logos/fake-sponser.png" ></li>
-    </span>
-    <span data-group-title="Silver Sponsors">
-      <li><img src="img/logos/fake-sponser.png" ></li>
-      <li><img src="img/logos/fake-sponser.png" ></li>
-    </span>
-    <span data-group-title="Bronze Sponsors">
-      <li><img src="img/logos/fake-sponser.png" ></li>
-      <li><img src="img/logos/fake-sponser.png" ></li>
-      <li><img src="img/logos/fake-sponser.png" ></li>
-    </span>
-  </ul>
-</div>
-
-</section>
+</footer>
 
 
 
@@ -542,23 +666,19 @@
   </div>
   <!-- END // Page Wrap -->
 
-  <!-- JS -->
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
 
-<!--   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
-<!--   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!-- JS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!--   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="dist/jquery-1.11.2.min.js"><\/script>')</script> -->
   <script type="text/javascript" src="dist/script.min.js"></script>
   <!-- CDN -->
   <!-- https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.js -->
   <script>
   var myTabs = tabs({
-    el: '#tabs',
-    tabNavigationLinks: '.tabs-nav-item',
-    tabContentContainers: '.tab-content-item'
+  el: '#tabs',
+  tabNavigationLinks: '.tabs-nav-item',
+  tabContentContainers: '.tab-content-item'
   });
   myTabs.init();
   </script>

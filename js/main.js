@@ -1,8 +1,11 @@
-(function($) {
+(function($){
     "use strict"; // Start of use strict
-
-
-
+    
+    
+    /* ---------------------------------------------
+     Scripts initialization
+     --------------------------------------------- */
+    
   init_scroll_navigate();
   
   $(window).trigger("scroll");
@@ -13,7 +16,7 @@
       $(window).trigger("resize");
       init_mobile_nav_toggle();
       init_classic_menu();
-      video_bg_init();
+      // video_bg_init();
       initPageSliders();
       initSponsersSort();
 
@@ -24,6 +27,93 @@
       init_classic_menu_resize();
       js_height_init();
   });
+
+/* --------------------------------------------
+ Platform detect
+ --------------------------------------------- */
+var mobileTest;
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    mobileTest = true;
+    $("html").addClass("mobile");
+}
+else {
+    mobileTest = false;
+    $("html").addClass("no-mobile");
+}
+
+var mozillaTest;
+if (/mozilla/.test(navigator.userAgent)) {
+    mozillaTest = true;
+}
+else {
+    mozillaTest = false;
+}
+var safariTest;
+if (/safari/.test(navigator.userAgent)) {
+    safariTest = true;
+}
+else {
+    safariTest = false;
+}
+
+// Detect touch devices    
+if (!("ontouchstart" in document.documentElement)) {
+    document.documentElement.className += " no-touch";
+}
+
+
+
+
+    /* ---------------------------------------------
+     Sections helpers
+     --------------------------------------------- */
+    
+    // Sections backgrounds
+    
+    var pageSection = $(".home-section, .page-section, .small-section, .split-section");
+    pageSection.each(function(indx){
+        
+        if ($(this).attr("data-background")){
+            $(this).css("background-image", "url(" + $(this).data("background") + ")");
+        }
+    });
+    
+    // Function for block height 100%
+    function height_line(height_object, height_donor){
+        height_object.height(height_donor.height());
+        height_object.css({
+            "line-height": height_donor.height() + "px"
+        });
+    }
+    
+    // Function equal height
+    !function(a){
+        a.fn.equalHeights = function(){
+            var b = 0, c = a(this);
+            return c.each(function(){
+                var c = a(this).innerHeight();
+                c > b && (b = c)
+            }), c.css("height", b)
+        }, a("[data-equal]").each(function(){
+            var b = a(this), c = b.data("equal");
+            b.find(c).equalHeights()
+        })
+    }(jQuery);
+    
+    
+    
+
+
+/* ---------------------------------------------
+  Nav panel classic
+--------------------------------------------- */
+
+
+
+
+
+
+
 
 
 
@@ -100,17 +190,17 @@ function init_mobile_nav_toggle() {
 
 
 
-function video_bg_init(){
-  $('#video-bg').vide({
-    'mp4': 'video/newOrleans',
-    'webm': 'video/newOrleans',
-    'ogv': 'video/newOrleans',
-    'poster': 'video/newOrleans.jpg',
-    }, {
-    position: '50% 50%',
-    posterType: 'jpg'
-  });
-}
+// function video_bg_init(){
+//   $('#video-bg').vide({
+//     'mp4': 'video/newOrleans',
+//     'webm': 'video/newOrleans',
+//     'ogv': 'video/newOrleans',
+//     'poster': 'video/newOrleans.jpg',
+//     }, {
+//     position: '50% 50%',
+//     posterType: 'jpg'
+//   });
+// }
 
 
 
@@ -461,6 +551,19 @@ $(document).ready(function(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* ---------------------------------------------
      Scroll navigation
      --------------------------------------------- */
@@ -529,7 +632,11 @@ $('a[href*="#"]:not([href="#"])').click(function() {
 
 
 
+$(document).ready(function() {
 
+  $(".video").fitVids();
+
+});
 
 
 
