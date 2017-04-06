@@ -1328,16 +1328,21 @@ select {
 }
 
 .footer .footer__nav {
-  margin-bottom: 1.5em;
+  padding-bottom: 0.75em;
 }
 
 .footer .footer__nav--item {
-  display: inline-block;
-  margin-right: 1.5em;
+  margin-bottom: 0.75em;
 }
 
-.footer .footer__nav--item:last-of-type {
-  margin-right: 0;
+@media screen and (min-width: 600px) {
+  .footer .footer__nav--item {
+    display: inline-block;
+    margin-right: 1.5em;
+  }
+  .footer .footer__nav--item:last-of-type {
+    margin-right: 0;
+  }
 }
 
 .footer .footer__nav--item > a {
@@ -1364,33 +1369,44 @@ select {
   display: block;
 }
 
-.footer .disclaimer .disclaimer-logo {
-  float: left;
-  display: block;
-  margin-right: 1.2406947891%;
-  width: 24.0694789082%;
-  padding: 1.2406947891%;
+@media screen and (min-width: 600px) {
+  .footer .disclaimer .disclaimer-logo {
+    float: left;
+    display: block;
+    margin-right: 1.2406947891%;
+    width: 24.0694789082%;
+    padding: 1.2406947891%;
+    vertical-align: middle;
+  }
+  .footer .disclaimer .disclaimer-logo:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer .disclaimer .disclaimer-logo img {
+  margin-bottom: 0.75em;
+  height: 3em;
   vertical-align: middle;
 }
 
-.footer .disclaimer .disclaimer-logo:last-child {
-  margin-right: 0;
-}
-
 .footer .disclaimer .disclaimer-text {
-  margin-left: 8.4367245658%;
-  float: left;
-  display: block;
-  margin-right: 1.2406947891%;
-  width: 66.253101737%;
-  text-align: left;
   color: rgba(255, 255, 255, 0.4);
   font-size: 0.9em;
   line-height: 1.5em;
 }
 
-.footer .disclaimer .disclaimer-text:last-child {
-  margin-right: 0;
+@media screen and (min-width: 600px) {
+  .footer .disclaimer .disclaimer-text {
+    margin-left: 8.4367245658%;
+    float: left;
+    display: block;
+    margin-right: 1.2406947891%;
+    width: 66.253101737%;
+    text-align: left;
+  }
+  .footer .disclaimer .disclaimer-text:last-child {
+    margin-right: 0;
+  }
 }
 
 .footer .comment {

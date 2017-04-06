@@ -20,12 +20,15 @@
 
 
   .footer__nav {
-    margin-bottom: $base-spacing;
+    padding-bottom: $small-spacing;
     &--item {
-      display: inline-block;
-      margin-right: $base-spacing;
-      &:last-of-type {
-        margin-right: 0;
+      margin-bottom: $small-spacing;
+      @include media($small-up) {
+        display: inline-block;
+        margin-right: $base-spacing;
+        &:last-of-type {
+          margin-right: 0;
+        }
       }
       > a {
         color: $navigation-color;
@@ -40,21 +43,32 @@
     }
   }
 
+
+
 .disclaimer {
   @include outer-container(450px);
   .disclaimer-logo {
-    @include span-columns(6);
-    @include pad();
-    vertical-align: middle;
+    @include media($small-up) {
+      @include span-columns(6);
+      @include pad();
+      vertical-align: middle;
+    }
+    img {
+      margin-bottom: $small-spacing;
+      height: 3em;
+      vertical-align: middle;
+    }
   }
 
   .disclaimer-text {
-    @include shift(2);
-    @include span-columns(16);
-    text-align: left;
     color: $footer-disclaimer-color;
     font-size: 0.9em;
     line-height: 1.5em;
+    @include media($small-up) {
+      @include shift(2);
+      @include span-columns(16);
+      text-align: left;
+    }
   }
 }
 
