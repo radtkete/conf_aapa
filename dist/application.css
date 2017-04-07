@@ -974,7 +974,7 @@ select {
 .navigation {
   background: #202020;
   z-index: 1000 !important;
-  border-bottom: 2px solid #63d0df;
+  box-shadow: 0px 3px 50px rgba(0, 0, 0, 0.15);
 }
 
 .navigation .navigation-menu-button {
@@ -2710,6 +2710,10 @@ Home sections
   border: 0;
   margin: auto;
   background: transparent;
+}
+
+.special-events__carousel--item .special-events__image .special-events__overlay button.overlay-button i {
+  font-size: 24px;
 }
 
 .special-events__carousel--item .special-events__content {
