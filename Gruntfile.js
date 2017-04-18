@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     uglify: {
         // doesnt need to be called build, we can call it whatever we want 
         build: {
-            src: ['js/back-fit_vidz.js', 'js/back-vidz.js', 'js/vendor/jquery.sticky.js', 'node_modules/slick-carousel/slick/slick.js', 'js/vendor/smoothscroll.js', 'js/plugins.js', 'js/main.js'],
+            src: ['js/plugins.js', 'js/main.js'],
             dest: 'dist/script.min.js',
         },
 
@@ -18,7 +18,7 @@ module.exports = function(grunt) {
                 compress: false,
                 preserveComments: 'all'
             },
-            src: ['js/back-fit_vidz.js', 'js/back-vidz.js', 'js/vendor/jquery.sticky.js', 'node_modules/slick-carousel/slick/slick.js', 'js/vendor/smoothscroll.js', 'js/plugins.js', 'js/main.js'],
+            src: ['js/plugins.js', 'js/main.js'],
             dest: 'dist/script.min.js',
         }
     },
@@ -68,13 +68,26 @@ module.exports = function(grunt) {
         },
         css: {
             files: ['scss/**/*.scss'], // <-- when these files change
-            tasks: ['sass:dev', 'postcss'] // <-- run this task
+            tasks: ['sass:dev'] // <-- run this task
         },
         html: {
             files: ['*.html']
         }
     },
     
+    connect: {
+        server: {
+          options: {
+            port: 9000,
+            base: '.',
+            hostname: '0.0.0.0',
+            protocol: 'http',
+            livereload: true,
+            open: true,
+          }
+        }
+    },
+
 
   });
 
@@ -83,9 +96,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
     // Register tasks(s)
-    grunt.registerTask('default', ['uglify:dev', 'sass:dev']);
+    grunt.registerTask('default', ['connect','watch']);
     grunt.registerTask('build', ['uglify:build', 'sass:build']);
 
 };
